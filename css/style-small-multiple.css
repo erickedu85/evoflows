@@ -1,0 +1,46 @@
+.smallMultiple .background{
+	fill:white;
+	opacity:1;
+	stroke:rgba(0,0,0,0.16);
+	stroke-opacity:0.5;
+	stroke-width:2;
+}
+
+.smallMultiple rect{
+	fill:white;
+	opacity:0.9;
+}
+ 
+.smallMultiple text{
+	pointer-events:none;
+}
+
+.smallMultiple .title {
+	font-size: 1rem; 
+	font-weight: 600;
+	fill: rgba(0,0,0,0.7);
+	text-anchor: middle;
+}
+
+.smallMultiple .y.axis text {
+	fill: rgba(0,0,0,0.7);
+	font-size: 0.7rem; 
+}
+
+.smallMultiple .x.axis text {
+	fill: rgba(0,0,0,0.7);
+	font-size: 0.85rem; 
+}
+
+.smallMultiple .label{
+	fill: rgba(0,0,0,0.6);
+	font-size:0.8rem;
+	text-transform: capitalize;
+	text-anchor: middle;
+}
+
+.smallMultiple .text-values{
+	fill: rgba(0,0,0,1);
+	font-size:0.7rem;
+	font-weight: 600;
+}

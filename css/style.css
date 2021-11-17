@@ -1,0 +1,590 @@
+
+body {
+	font-family: 'Roboto', 'Source Sans Pro', sans-serif;
+	background: white; /* #f9f9f9ff; */ /* #f1f1f1; */
+	font-size:100%;
+	/* font-size: 1rem; */
+}
+
+
+h1 {
+    font-size: 3.5rem;
+}
+
+h2 {
+    font-size: 2.25rem;
+}
+
+h3 {
+    font-size: 2rem;
+}
+
+h4 {
+	font-size: 1.75rem;
+	font-weight: 400;
+	letter-spacing: 0.07em;
+	color:#252525;
+}
+
+h5 {
+	font-size: 1.5rem;
+	font-weight: 400;
+	letter-spacing: 0.0em;
+	color:#252525;
+}
+
+h6 {
+	font-size: 1.25rem;
+	font-weight: 500;
+	letter-spacing: 0.05em;
+	color:#525252;
+}
+
+p {
+    font-size: 1rem;
+}
+
+
+.title1{font-size:1.20rem;}
+
+.subtitle1{
+	font-size: 1.10rem;
+	font-weight: 400;
+	font-style:normal;
+	letter-spacing: 0.05em;
+}
+
+.subtitle2{
+	font-size: 0.9rem;
+	font-weight: 500;
+	font-style:normal;
+	letter-spacing: 0.03em;
+}
+
+.body1{
+	font-size: 0.9rem;
+	font-weight: 400;
+	font-style:normal;
+	letter-spacing: 0.04em;
+}
+
+.body2{
+	font-size: 0.8rem;
+	font-weight: 400;
+	font-style:normal;
+	letter-spacing: 0.02em;
+}
+
+
+.button{
+	font-size: 0.8rem;
+	font-weight: 500;
+	font-style:normal;
+	letter-spacing:0.05em;
+	text-transform: uppercase;
+}
+
+.caption{
+	font-size: 0.6rem;
+	font-weight: 400;
+	font-style:normal;
+	letter-spacing: 0.01em;
+}
+
+.overline{
+	font-size: 0.5rem;
+	font-weight: 400;
+	font-style:normal;
+	letter-spacing: 0.03em;
+	text-transform: uppercase;	
+}
+
+
+
+
+div {
+	-webkit-user-select: none; /* Chrome, Opera, Safari */
+	-moz-user-select: none; /* Firefox 2+ */
+	-ms-user-select: none; /* IE 10+ */
+	/* user-select: none; Standard syntax */
+}
+
+
+.text-truncate{
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.text-uppercase{
+	text-transform: uppercase;
+}
+
+.text-bold{
+	font-weight: 700;
+}
+
+/*  */
+/*  */
+/* BUTTONS */
+
+.btnContained{
+	border-radius: 4px!important;
+	align-items: center!important;
+	box-sizing: border-box!important;
+	vertical-align: middle!important;
+	/* padding:0 1rem!important;
+	margin:0.5rem 1rem!important; */
+}
+
+.btnOutlined{
+	border-radius: 4px!important;
+	align-items: center!important;
+	box-sizing: border-box!important;
+	vertical-align: middle!important;
+}
+
+
+/*  */
+/*  */
+/*  */
+
+
+/*  */
+/*  */
+/* CHIPS */
+
+.chipFilter{
+	border-radius: 26px!important;
+	align-items: center!important;
+	box-sizing: border-box!important;
+	vertical-align: middle!important;
+	border:1px solid rgb(238, 238, 238);
+	color: #212121;	
+	transition-duration: 0.4s;
+}
+
+.chipFilter:hover, .chipFilter.active:hover{
+	background-color: rgba(238, 238, 238, 0.4);
+}
+
+.chipFilter.active{
+	background-color: rgba(238, 238, 238, 0.8);
+}
+
+
+
+
+/*  */
+/*  */
+/*  */
+
+
+
+
+
+
+
+
+
+
+
+/* APP HEADER  */
+#appHeaderWrapper {
+	background: #2e7d32!important;
+	z-index: 1;
+	padding: 0.3em 0.5em 0.1em 0.7em;
+}
+
+.navbar-brand{
+	padding: 0;
+
+}
+
+.navbar-brand .title {
+	vertical-align: middle;
+	font-size: 0.9em;
+	font-weight: 700;
+	letter-spacing: 0.15em;
+	color:rgba(255, 255, 255, 0.9);
+	margin: 0em 0em 0em 0.3em;
+}
+
+.navbar-brand .subTitle {
+	vertical-align: middle;
+	font-size: 0.7em;
+	font-weight: 500;
+	color:rgba(242, 242, 242, 0.7);
+	margin: 0em 0em 0em 0.3em;
+	display:inline-block;
+}
+
+.panelInfo{
+	cursor:pointer;
+	margin:0;
+	padding: 0;
+	vertical-align: middle;
+}
+
+#appIcon {
+	height: 25px;
+	width: 25px;
+}
+
+/* ========================== */
+
+#mainWrapper{
+	/* padding: 70px 22px 0px 22px; */
+	padding: 3.4em 0.0em 0em 0.0em;
+}
+
+/* ========================== */
+
+.plus{
+	color:rgba(238, 238, 238, 0.8); 
+	font-weight:900;
+	/* padding-right: 0.1em; */
+	margin:0px;
+	padding:0px;
+	font-size:0.8rem;
+}
+
+/* ========================== */
+/* ITEM MENUS NAV */
+
+.itemMenu{
+	margin:10px 0px 10px 0px;
+}
+
+.dropdown-menu{
+	min-width: 90px !important;
+	max-width: 90px !important;
+	width: 90px !important;
+}
+
+.dropdown-item{
+	border-bottom: 1px solid#bdbdbd;
+	padding-left: 5px;
+	padding-right: 0;
+	/* max-width: 50px !important;
+	width: 50px !important; */
+}
+
+/* ========================== */
+
+
+
+
+/* Main title */
+/* ========================== */
+#mainTitleWrapper {
+	vertical-align: middle;
+}
+
+#mainTitle{
+	text-align: center;
+}
+
+#mainSubtitleDate {
+	text-transform: capitalize;
+}
+
+#mainSubtitleQuantitative, #mainSubtitleDataType{
+	font-weight: bold;
+	color: #3366cc;
+	text-transform: uppercase
+}
+
+
+/* ========================== */
+/* ========================== */
+ #vistas{
+	margin-top: 1em;
+	opacity:0 !important;
+	
+}
+
+
+/* ========================== */
+/* ========================== */
+/* EACH VIS */
+.col-wrapper{
+	padding-left:0.4em;
+	padding-right:0.4em;
+}
+
+/* ========================== */
+/* TITLE VIS */
+.title-vis-wrapper {
+	vertical-align: middle;
+	text-align: center;
+	/* margin: 5px auto 0px; */
+}
+
+.title-vis-wrapper .title-vis {
+	display: inline-block;
+	vertical-align: middle;
+	padding: 0px 0px 0px 0px;
+	text-transform: uppercase;
+}
+/* VIS wrapper */
+.vis-wrapper {
+	border: 1px solid grey;
+	border-radius: 5px;
+	background: white;
+	padding: 0.5em;
+}
+
+.vis-subwrapper{
+	background: white;
+}
+
+.vis-header{
+	margin: 0.5em 0em 2em 0em;
+}
+
+#btnTreeNav{
+	margin: 0;
+	padding-top: 0;
+	padding-bottom:0;
+}
+
+/* BUTTONS VIS MENU GROUP */
+/* ========================== */
+.input-group{
+	margin-left:1em;
+}
+
+/* BUTTONS VIS MENU */
+/* ========================== */
+.vis-menu-btn {
+	border: 1px solid #6abf69;
+	background-color: #fafafa;
+	
+}
+.vis-menu-btn.active {
+	background-color:#6abf69;
+	color: #fafafa;
+}
+.vis-menu-btn:hover{
+	border: 1px solid #388e3c;
+	box-shadow: 0 2px 4px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12)!important;
+}
+
+
+
+
+
+/* ACTIVE */
+
+/* ACTIVE:HOVER */
+
+/* OFF */
+
+/* OFF:HOVER */
+
+
+/* ========================== */
+
+.icon {
+	height: 18px;
+	width: 18px;
+	padding: 0px;
+	margin: 0px;
+}
+
+
+/* ========================== */
+/* MENU FIXED */
+.menuFixed{
+	position:fixed;
+}
+
+
+/* ========================== */
+/* ========================== */
+/* EACH TOOLTIP */
+.tooltip{	
+	width: auto;
+	height: auto;
+	border-radius:5px;
+	pointer-events: none;
+	padding: 0.5em 0.5em 0em 0.5em;
+	background:  rgba(255, 255, 255, 0.95);
+	border: 1px solid #bdbdbd;
+	/* background-color: #f1f1f1; */
+	/* h-offset v-offset blur spread color */
+	box-shadow: 0 2px 4px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12)!important;
+}
+
+
+/* ========================== */
+/* ========================== */
+
+/* ========================== */
+/* SHARING BUTTONS */
+.sharing-buttons{
+	/* padding:0.6em 0.2em 0.6em 0.2em; */
+	/* border-radius: 5px; */
+	/* background-color: white; */
+	/* border: 1px solid #bdbdbd; */
+	/* right:0.5%; */
+	/* left:0%;
+	top:50%; */
+	z-index: 1;	
+}
+
+.sharing-buttons a{
+	border-radius: 0.15em;
+	display:inline-block;
+	/* margin-top:0.1em; */
+	padding: 0.4em 0.5em 0.4em 0.5em;
+	color: #fff;
+	text-decoration: none;
+}
+
+.sharing-buttons-mobil a{
+	border-radius: 0.05em;
+	display:inline-block;
+	margin-top:0.4em;
+	padding: 0.1em 0.2em 0.1em 0.2em;
+	color: #fff;
+	text-decoration: none;
+}
+
+.sharing-buttons a:hover{
+	color: #eee;
+	text-decoration: none;
+}
+
+.fab-social{
+	font-size:1.4em;
+}
+
+.fab-social-mobil{
+	font-size:1em;
+}
+
+.facebook{
+	opacity:1;
+	background: #3B5998; 
+}
+
+.twitter{
+	background: #00ACED;
+}
+
+
+
+
+
+
+
+.vis-population-type{
+	width:100px;	
+
+	max-width: 120 fpx;
+	min-width: 120px;
+	white-space: nowrap;
+	word-wrap: break-word;
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
+
+
+
+
+/*  */
+#msg-title-wrapper{
+	background:rgba(255, 255, 255, 0.6);
+	vertical-align: middle;
+	display:inline-block;
+	position:absolute;
+	margin-top:4.5em;
+	right: 2%;
+}
+
+#msg-title-wrapper .date-title-wrapper{
+	width: auto;
+	vertical-align: middle;
+	display:inline-block;
+	text-align: right;
+	padding-right:0.5em;
+	letter-spacing: 0.3em
+}
+#msg-title-wrapper #date-title{
+	margin:0;
+}
+#msg-title-wrapper .value-title-wrapper{
+	width: auto;
+	vertical-align: middle;
+	display:inline-block;
+	padding-right: 2em;
+	padding-left:1em;
+	text-align: left;
+}
+
+#msg-title-wrapper .quantitative-value{
+	display:inline-block;
+}
+
+#msg-title-wrapper .quantitative-label{
+	display:inline-block;
+	/* width: auto; */
+}
+
+#msg-title-wrapper .label-value{
+	display:inline-block;
+	text-transform: uppercase;
+}
+
+
+#porcentageVariationDecrease, #porcentageVariationIncrease{
+	padding: 0;
+	margin: 0;
+	width: 3.5em;
+}
+
+
+
+.btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
+	background-color: #6abf69 !important;
+	border:1px solid #6abf69 !important;
+}
+
+
+
+
+/*
+::::::::::::::::::::::::::::::::::::::::::::::::::::
+Bootstrap 4 breakpoints
+*/
+/* Small devices (landscape phones. 544px and up) */
+@media (min-width: 544px) {  
+	html {
+        font-size: 14px;
+    }
+}
+
+/* Medium devices (tablets. 768px and up) The navbar toggle appears at this breakpoint */
+@media (min-width: 768px) {  
+	html {
+        font-size: 14.5px;
+    }
+}
+
+/* Large devices (desktops. 992px and up) */
+@media (min-width: 992px) { 
+	html {
+        font-size: 15px;
+    }
+
+}
+
+/* Extra large devices (large desktops. 1200px and up) */
+@media (min-width: 1200px) {  
+	html {
+        font-size: 15.5px;
+    }
+	
+}

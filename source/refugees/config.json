@@ -1,0 +1,77 @@
+{
+	"init": {
+		"optsGeneral": {
+			"log": false,
+			"title": "",
+			"dataType": "refugees",
+			"durationTransition":200
+		},
+		"optsMultistream": {
+			"polarityTemporal": "y",
+			"stepTemporal": 1,
+			"animation": false,
+			"interpolateType": "cardinal-open",
+			"orderType": "inside-out",
+			"optsMultiresolution": {
+				"layersFadingColorsFactor": 1.15,
+				"layersBorderlineColor": "#585858",
+				"layersOpacitySelected": 1,
+				"layersOpacityNotSelected": 0.10,
+				"layersOutputRangeLabelScale": [0.8,1],
+				"layersLabelType": "flowLabelText"
+			},
+			"optsContext": {
+				"numTimeStepBrushZoom": 10,
+				"numTimeStepBrushDistortion": 1,
+				"numTimeStepBrushNormal": 2
+			}
+		},
+		"optsMap": {
+			"typeMapVisualization":"points",
+			"outputRangeColorScaleMap": ["#f0f9e8", "#1b73b2"],
+			"featuresOutputRangeLabelScale":[1,1]
+		},
+		"optsEvents": {
+			"eventWidthSizeLabelScale": 0.8,
+			"eventHeightSizeLabelScale": 0.8
+		}
+	},
+	"list": [{
+		"optsGeneral": {
+			"active": true,
+			"generate_date": ""
+		},
+		"optsMultistream": {
+			"facteurZoom": 5,
+			"facteurDis": 2,
+			"facteurNor": 1,
+			"offsetType": "zero",
+			"optsMultiresolution": {
+				"showLimitsAreas": false,
+				"layersFadingColors": false,
+				"layersShowBorderline": false
+			},
+			"optsContext": {
+				"showBrushDistortion": false,
+				"showBrushNormal": true,
+				"showContext": true,
+				"blockedBrushNormalLeft": false,
+				"blockedBrushNormalRight": false,
+				"blockedBrushZoom": false,
+				"timeIntervalBrushNormalLeft": [],
+				"timeIntervalBrushDistortionLeft": [],
+				"timeIntervalBrushZoom": [],
+				"timeIntervalBrushDistortionRight": [],
+				"timeIntervalBrushNormalRight": []
+			}
+		},
+		"optsTree": {
+			"key_bottom_list": [],
+			"key_top_list": []
+		},
+		"optsMap":{
+			"scale":1,
+			"translate":[]
+		}
+	}]
+}

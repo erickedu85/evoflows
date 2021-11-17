@@ -1,0 +1,15 @@
+.tooltip-map {
+	position: absolute;
+	display:none;
+}
+
+.tooltip-map .title{
+	font-size: 16px;
+	font-weight: bold;
+	text-transform: capitalize;	
+}
+
+.tooltip-map .info {
+	font-size: 18px;
+	text-transform: capitalize;
+}

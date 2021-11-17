@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	
+	<title>EvoFlows</title>
+
+	<!-- Required meta tags -->
+	<meta name="author" content="Erick Cuenca">
+	<meta name="keywords" content="EvoFlows, UCL, OD Data, Flows">
+	<meta name="description" content="EvoFlows">	
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<!-- SHORTCUT ICON -->
+	<link rel="shortcut icon" type="image/png" href="img/evoflows.png" />
+
+	<!-- BOOTSTRAP CSS-->
+	<link rel="stylesheet" href="js/bootstrap-4.2.1-dist/css/bootstrap.min.css" js>
+
+	<!-- LOADER CSS-->
+	<link rel="stylesheet" type="text/css" href="css/loader.css">
+
+	<!-- STYLE MAIN CSS -->
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+
+	<!-- MULTISTREAM-VIS CSS -->
+	<link rel="stylesheet" type="text/css" href="css/style-multistream.css">
+	<link rel="stylesheet" type="text/css" href="css/style-multistream-tooltip.css">
+
+	<!-- TREE-VIS CSS -->
+	<link rel="stylesheet" type="text/css" href="css/style-tree.css">
+	<link rel="stylesheet" type="text/css" href="css/style-tree-tooltip.css">
+
+	<!-- MAP-VIS CSS-->
+	<link rel="stylesheet" type="text/css" href="css/style-map.css">
+	<link rel="stylesheet" type="text/css" href="css/style-map-tooltip.css">
+
+	<!-- TREENAV CSS-->
+	<link rel="stylesheet" type="text/css" href="css/treenav.css">
+
+	<!-- LEGEND CSS-->
+	<link rel="stylesheet" type="text/css" href="css/style-legend.css">
+
+	<!-- SMALL MULTIPLES CSS-->
+	<link rel="stylesheet" type="text/css" href="css/style-small-multiple.css">
+
+	<!-- SNAPSHOT CSS-->
+	<link rel="stylesheet" type="text/css" href="css/style-snapshot.css">
+
+	<!-- Google Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+
+	<!-- Icons Fonts -->
+	<link rel="stylesheet"
+		href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"
+		integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+		crossorigin="anonymous">
+
+	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	<script src="js/jquery-3.4.1/jquery.min.js"></script>
+	<script src="js/popper.js/popper.min.js"></script>
+	<script src="js/bootstrap-4.2.1-dist/js/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+
+	<div id="loader"></div>
+	<div id="overlay"></div>
+
+	<div class="container-fluid">
+		<nav id="appHeaderWrapper" class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+			<div class="navbar-brand">
+				<p class="title">EvoFlows</p>
+				<p class="subTitle">Refugee movements evolution by origin and destination</p>
+				<i class="fas fa-info-circle panelInfo" data-toggle="modal" data-target="#infoModal"></i>
+			</div>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+		</nav>
+		<div id="mainWrapper" class="row">
+			<div class="col-12">
+				<div id="tree-vis-wrapper" class="treenav vis-subwrapper">
+					<svg id="svg-tree-vis"></svg>
+				</div>
+				<div id="mainTitleWrapper" class="row">
+				</div>
+				<div id="vistas" class="row">
+					<div class="col-11 col-wrapper">
+						<div class="vis-wrapper">
+							<div class='row'>
+								<div class="col-7">
+									<div class="title-vis-wrapper">
+									</div>
+									<div id="multistream-vis-wrapper" class="vis-subwrapper">
+										<div class="vis-header-wrapper">
+	
+											<div class="btn-toolbar justify-content-between vis-header" role="toolbar" aria-label="Toolbar with button groups">
+
+												<div class="btn-group" role="group" aria-label="First group">
+													
+													<div class="btn-group input-group" role="group">
+														<button id="btnTreeNav" type="button" class="btn vis-menu-btn" onclick="openTreeNav()"
+															data-toggle="tooltip" data-placement="bottom" title="Regions" >
+															<img class="icon" src="img/icon_hierarchy_menu.png" alt="" />
+														</button>
+													</div>
+
+												</div>	
+
+												<div class="btn-group" role="group" aria-label="Second group">
+
+													<div class="btn-group input-group" role="group" style="margin-right: 1em;">
+													
+														<div class="input-group-prepend">
+															<span class="input-group-text">
+																% Variation:
+																&nbsp;
+																<img class="icon" alt="increase" src="img/events/arrow_up.svg">
+																&nbsp;
+																<input type="number" id="porcentageVariationIncrease" name="porcentage" title="% Variation Increase">
+																&nbsp;
+																<img class="icon" alt="increase" src="img/events/arrow_down.svg">
+																&nbsp;
+																<input type="number" id="porcentageVariationDecrease" name="porcentage" title="% Variation Decrease">
+																&nbsp;
+																or
+																&nbsp;
+																<button style="padding: 0 5px 0 5px;" id="btnMCS" type="button" class="btn vis-menu-btn"
+																	data-toggle="tooltip" data-placement="bottom" title="Maximum Contiguous Subarray Period">
+																	MCS
+																</button>
+															</span>
+														</div>
+
+													</div>
+
+													<div class="btn-group input-group" role="group">
+
+														<div id="multistream-offsetType" class="btn-group btn-group-toggle" data-toggle="buttons">
+															<label title="Streamgraph" id="silhouette" class="btn vis-menu-btn">
+																<input type="radio" name="offsetType-options"
+																autocomplete="off" value="silhouette"> <img
+																class="icon" src="img/streamgraph.png" alt="" />
+															</label> 
+															<label title="Stackedgraph" id="zero" class="btn vis-menu-btn">
+																<input type="radio" name="offsetType-options" 
+																autocomplete="off" value="zero"> <img
+																class="icon" src="img/stackgraph.png" alt="" />
+															</label>
+														</div>
+														
+													</div>
+
+												</div>
+														
+											</div>
+										</div>
+										<div id="multistream-vis">
+											<svg id="svg-multistream-vis">
+											</svg>
+										</div>
+									</div>
+								</div>
+								<div class="col col-5">
+									<div class="title-vis-wrapper">					
+									</div>
+									<div id="map-vis-wrapper" class="vis-subwrapper">
+										<div class="vis-header-wrapper">
+											<div class="btn-toolbar float-right vis-header" role="toolbar" aria-label="Toolbar with button groups">
+
+												<div class="btn-group input-group" role="group" aria-label="Third group">
+													<button id="btnArrow" type="button" class="btn vis-menu-btn"
+														data-toggle="tooltip" data-placement="bottom" title="Show/Hide Arrows" >
+														<img class="icon" alt="FlowArrow" src="img/flow_arrow.png">
+													</button>
+												</div>
+												<div class="btn-group input-group" role="group" aria-label="Second group">
+													<div id="map-type-visualization" class="btn-group btn-group-toggle" data-toggle="buttons">
+														<label title="Choropleth" id="choropleth" class="btn vis-menu-btn">
+															<input type="radio" name="map-type-options" 
+															autocomplete="off" value="choropleth"> <img
+															class="icon" alt="Choropleth" src="img/choropleth.png">
+
+														</label> <label title="Points" id="points" class="btn vis-menu-btn"> <input
+															type="radio" name="map-type-options"  autocomplete="off"
+															value="points"> <img class="icon" alt="Bubble"
+															src="img/point.png">
+														</label>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div id="map-vis">
+											<div>
+												<div id="msg-title-wrapper">
+													<div class="value-title-wrapper">
+														<h1 id="quantitative-value" class='quantitative-value'></h1>
+														<div class='quantitative-label'>
+															<h6 id="label-value" class='label-value'></h6>
+														</div>
+													</div>
+													<div class="date-title-wrapper">
+														<h2 id="date-title"></h2>
+													</div>
+												</div>
+											</div>
+											<svg id="svg-map-vis"></svg>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-1 col-wrapper">
+						<div class="title-vis-wrapper">					
+						</div>
+						<div class='vis-wrapper'>
+							<div id="snapshot-vis-wrapper" class="vis-subwrapper">
+								<div class="vis-header-wrapper">
+									<div class="btn-toolbar vis-header" role="toolbar" aria-label="Toolbar with button groups">
+										<div class="btn-group mr-2" role="group" aria-label="Second group">
+											<div class="input-group-prepend">
+												<button type="button" class="btn btn-primary button" data-toggle="modal" data-target="#addStateModal">State</button>
+												<button type="button" class="btn btn-outline-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+													<span class="sr-only">Toggle Dropdown</span>
+												</button>
+												<div class="dropdown-menu">
+													<a class="dropdown-item" href="#" onclick="eventsToSnapshots()">Get events</a>
+													<a class="dropdown-item" href="#" onclick="clearAllSnapshots()">Clear all</a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div id="snapshot-vis">
+									<ul id="col-list-states" class="list-group">
+									</ul>	
+								</div>
+							</div>
+						</div>
+					</div>		
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<!-- Modal information dataset -->
+	<div class="modal fade" id="infoModal" role="dialog">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h4 class="modal-title">Refugee Movements</h4>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<p>This visualization shows the global refugee movements<br><br>
+						<strong>Period: </strong>1960 - 2018<br>
+						<strong>Polarity: </strong>yearly<br>
+						<strong>Data source: </strong>We use the data provided by <a href="http://popstats.unhcr.org/en/persons_of_concern" target="_blank">The UN Refugee Agency</a> 
+					</p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Modal Add State -->
+	<div class="modal fade" id="addStateModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog-centered modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel">New Snapshot</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<form>
+						<div class="form-group">
+							<label for="titleAddState" class="col-form-label">Description:</label>
+							<textarea type="text" class="form-control" id="titleAddState"></textarea>
+						</div>
+					</form>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+					<button type="submit" class="btn btn-primary" data-dismiss="modal" onclick=addSnapshot()>Add</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Modal Pin Map Region -->
+	<div class="modal fade" id="pinMap" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			<div class="modal-dialog-centered modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="exampleModalLabel">Pin regions</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div id="pinMap-data-modal-msg" class="modal-body"></div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+						<button type="submit" class="btn btn-primary" data-dismiss="modal" onclick=validateFilterMap()>Apply</button>
+					</div>
+				</div>
+			</div>
+		</div>	
+
+
+	<script type="text/javascript">
+
+
+		function isMobileDevice() {
+			return (typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1);
+		};
+
+
+		const gapWindowsTop = 180;
+		const windowsHeight = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+
+		//MULTISTREAM-VIS WIDTH HEIGHT
+		var multistreamVisWidth= document.querySelector('#multistream-vis-wrapper').getBoundingClientRect().width;
+		var multistreamVisHeight = windowsHeight - gapWindowsTop;
+		// console.log('screen height',windowsHeight)
+		//MAP-VIS WIDTH HEIGHT
+		var mapVisWidth = document.querySelector('#map-vis-wrapper').getBoundingClientRect().width;
+		var mapVisHeight = windowsHeight - gapWindowsTop;
+		//TREE-VIS WIDTH HEIGHT
+		var treeVisWidth = 600;
+		var treeVisHeight;// according to the hierarchy;
+		//SNAPSHOT-VIS MAX HEIGHT
+		document.getElementById("snapshot-vis").style.maxHeight = windowsHeight - gapWindowsTop + "px";
+
+		function openTreeNav() {
+			let openCloseBtnNav = document.getElementById("btnTreeNav");
+			let leftNav = document.getElementById("tree-vis-wrapper");
+			let wrapper = document.getElementById("vistas");
+			
+			if (!openCloseBtnNav.classList.contains("active")) {
+				leftNav.style.width = treeVisWidth+ "px";
+				wrapper.style.marginLeft = treeVisWidth +"px"; 
+			} else {
+				leftNav.style.width = "0";
+				wrapper.style.marginLeft = "-1em"; 
+			}
+			openCloseBtnNav.classList.toggle("active");
+		}
+
+
+		$(document).ready(function() {
+			load_d3();
+		});
+
+	
+	</script>
+
+
+	<!-- D3 library -->
+	<script src="js/d3/d3.v3.min.js"></script>	
+	<!-- D3 Queue Async -->
+	<script src="js/d3/d3-queue.js"></script>
+	<!-- Colors -->
+	<script src="js/casero/chroma.js"></script>
+	<!-- rPoly Algorithm -->
+	<script src="js/casero/compVecOut.js"></script>
+	<script src="js/casero/PolyReCoeffInT.js"></script>
+	<script src="js/casero/rpoly.js"></script>
+
+	<!-- General functions -->
+	<script src="js/casero/generalizes.js"></script>
+	<script src="js/global.js"></script>
+	<script src="js/multistream-vis.js"></script>
+	<script src="js/multistream-hierarchy-util.js"></script>
+	<script src="js/tree-vis.js"></script>
+	<script src="js/map.js"></script>
+	<script src="js/map-barchart.js"></script>
+	<script src="js/point-change.js"></script>
+	<script src="js/snapshot-vis.js"></script>
+
+</body>
+
+
+</html>	

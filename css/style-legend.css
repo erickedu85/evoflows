@@ -1,0 +1,33 @@
+.legend .background{
+	fill:white;
+	opacity:1;
+	stroke:rgba(0,0,0,0.16);
+	stroke-opacity:0.5;
+	stroke-width:2;
+	/* box-shadow: 0 2p	x 4px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12)!important; */
+}
+
+.legend .symbol{
+	pointer-events:none;
+}
+  
+.legend .text{
+	font-size:0.7rem;
+	fill: rgba(0,0,0,0.8);
+	pointer-events:none;
+}
+
+.legend .text-centered{
+	text-anchor: middle;
+}
+
+.legend .text-left{
+	text-anchor: start;
+}
+
+.legend .title{
+	fill: rgba(0,0,0,0.8);
+	font-size:0.75rem;
+	pointer-events:none;
+	text-anchor: middle;
+}

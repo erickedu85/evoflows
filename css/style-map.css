@@ -1,0 +1,140 @@
+#svg-map-vis {
+	/* background:#f2f2f2; */
+	background:white;
+}
+
+
+/* MAP LAND */
+.land {
+	fill: #f0f0f0;
+	stroke: rgba(0, 0, 0, 0.3);
+}
+
+.land-borders {
+	stroke:none;
+	fill-opacity: 0;
+}
+
+.land-borders:hover {
+	stroke: black; 
+}  
+
+.land-label{
+	fill: rgba(0, 0, 0, 0.8);
+	fill-opacity: 1;
+	font-weight: 600;
+	text-anchor: middle;
+	text-transform: capitalize;
+	pointer-events: none;
+	/* text-shadow: 2px 0 10px rgba(255, 255, 255, 1	); */
+}
+
+.land-label-border{
+	fill: rgba(255, 255, 255, 1);
+	fill-opacity: 1;
+	font-weight: 900;
+	text-anchor: middle;
+	text-transform: capitalize;
+	pointer-events: none;
+	/* text-shadow: 2px 0 10px rgba(255, 255, 255, 1	); */
+}
+
+.land-rect{
+	fill:none;
+	stroke:black;
+	stroke-width: 1px;
+}
+
+/* ==================== */
+/* POINT MAP */
+
+.feature-map-selected{
+	fill:#ffa700;
+	stroke:#ffa700;
+}
+
+.feature-map-selected-background{
+	fill:#ffa700;
+	stroke:black;
+}
+
+/* ==================== */
+.feature-map{
+	stroke:#bdbdbd;
+}
+
+.feature-map-background{
+	fill:white;
+	stroke:black;
+}
+
+
+/* ==================== */
+/* CHOROPLETH MAP */
+/* .feature-map-selected .choropleth-map{
+	fill:#ffa700;
+	stroke:#bdbdbd;
+}
+
+.feature-map .choropleth-map{
+	stroke:#bdbdbd;
+} */
+
+
+
+/* ==================== */
+/* LINE ARROW */
+.line-arrow-map{
+	pointer-events: none;
+}
+
+/* to change only arrowHead */
+.arrowHead{
+	fill:rgba(0, 0, 0, 0.9	);
+	stroke:rgba(0, 0, 0, 1);
+	stroke-width:1;
+	stroke-opacity:1;
+
+}
+/* ==================== */
+
+
+/* ==================== */
+/* SMALL MULTIPLE */
+/* Barchart */
+
+
+.smallMultiple .titulo{
+	font-size: 0.8rem;
+	text-anchor: middle;
+}
+
+/* Axis in Barchart */
+.barchart .x.axis path, 
+.barchart .y.axis path{
+	stroke: rgba(0, 0, 0, 1);
+}
+
+.barchart .x.axis line,
+.barchart .y.axis line {
+	stroke: rgba(0, 0, 0, 1);
+}
+
+.barchart .y.axis text{
+	text-transform: capitalize;
+}
+
+.barchart .barsValuesTextTopK{
+	text-anchor:start;
+}
+
+.barchart .barsTopK{
+	stroke:#bdbdbd;
+}
+
+.barchart .x.grid {
+	stroke: #636363;
+	stroke-opacity:0.3;
+	stroke-width: 1;
+	pointer-events: none;
+}
