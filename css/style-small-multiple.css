@@ -24,23 +24,23 @@
 
 .smallMultiple .y.axis text {
 	fill: rgba(0,0,0,0.7);
-	font-size: 0.7rem; 
+	font-size: 0.5rem; 
 }
 
 .smallMultiple .x.axis text {
 	fill: rgba(0,0,0,0.7);
-	font-size: 0.85rem; 
+	font-size: 0.65rem; 
 }
 
 .smallMultiple .label{
 	fill: rgba(0,0,0,0.6);
-	font-size:0.8rem;
+	font-size:0.6rem;
 	text-transform: capitalize;
 	text-anchor: middle;
 }
 
 .smallMultiple .text-values{
 	fill: rgba(0,0,0,1);
-	font-size:0.7rem;
+	font-size:0.6rem;
 	font-weight: 600;
 }

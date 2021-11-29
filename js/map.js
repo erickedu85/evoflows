@@ -3,7 +3,7 @@
 //https://github.com/d3/d3-3.x-api-reference/blob/master/Geo-Projections.md
 
 var zoomMap = d3.behavior.zoom()
-					.translate([0, 0])
+					.translate([0, 40])
 					.scale(1)
 					.scaleExtent([0.5, 30])
 					.on("zoom", zoomed);
@@ -74,7 +74,7 @@ function createMapSvg(){
 						.on("dblclick", initMap);
 
 	svgMap.attr('viewBox', '0 0 ' +  ( mapVisWidth) + ' '  + ( mapVisHeight) )
-						.attr('height', multistreamVisHeight)
+						.attr('height', mapVisHeight)
 						.attr('width', '100%')
 						.attr('preserveAspectRatio', 'none');
 
@@ -82,7 +82,9 @@ function createMapSvg(){
 	svgMap.call(zoomMap);
 
 	//Group for the zoomable elements
-	gMapZoomable = svgMap.append("g").attr("id","groupMapZoomable");
+	gMapZoomable = svgMap.append("g")
+					.attr("id","groupMapZoomable")
+					.attr("transform", "translate(" +0 + ","+ 40 + ")");
 	
 	//Group for the land layer on the map
 	gLandMap = gMapZoomable.append("g").attr("id","groupLand");
@@ -144,15 +146,15 @@ function createMapSvg(){
 
 function loadMapVis(rawGeoJson){
 	
-	updateMapTypeRepresentation(typeMapVisualization);
+	// updateMapTypeRepresentation(typeMapVisualization);
 
-	updateShowArrowMap(showMapArrow);
+	// updateShowArrowMap(showMapArrow);
 	
 	createMapSvg();
 	
 	landMap();
 
-	createMapLegend();
+	//createMapLegend();
 
 	createTopKBarchart();
 	
@@ -660,7 +662,7 @@ function coloring(selectedItem, otherItems,orientation,durationAnimation){
 	if(showMapArrow){
 		updateLinesOverMap(currGroupedData,selectedItem,orientation,durationAnimation);
 	}
-	updateMapLegendChoropleth(extentData);
+	//updateMapLegendChoropleth(extentData);
 	updateFeaturesLandLabel(currGroupedData,selectedItem,durationAnimation);
 	updateBarchart(currGroupedData,topKBarchart,durationAnimation);
 

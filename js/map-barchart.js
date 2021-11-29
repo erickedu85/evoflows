@@ -38,11 +38,11 @@ function createTopKBarchart(){
 
 	let barchart_wrapper_height;
 	if (windowsHeight >= 1440){
-		barchart_wrapper_height = mapVisHeight*0.35
+		barchart_wrapper_height = mapVisHeight*0.25
 	}else if (windowsHeight >= 1080 ){
-		barchart_wrapper_height = mapVisHeight*0.40
+		barchart_wrapper_height = mapVisHeight*0.30
 	} else{
-		barchart_wrapper_height = mapVisHeight*0.47
+		barchart_wrapper_height = mapVisHeight*0.35
 	}
 
 
@@ -58,7 +58,7 @@ function createTopKBarchart(){
 				.attr("height",barchart_wrapper_height); 
  
 
-	marginBarchartMap = {top:70,right:55,bottom:60,left:barchart_wrapper_width*0.25};
+	marginBarchartMap = {top:70,right:55,bottom:45,left:barchart_wrapper_width*0.25};
 	heightBarchartMap = barchart_wrapper_height - marginBarchartMap.top - marginBarchartMap.bottom;
 	widthBarchartMap = barchart_wrapper_width - marginBarchartMap.left - marginBarchartMap.right;
 
@@ -88,7 +88,7 @@ function createTopKBarchart(){
 	gBarchartMap.append("text")
 			.attr("class","label")
 			.attr("x",marginBarchartMap.left+widthBarchartMap/2)
-			.attr("y",barchart_wrapper_height - marginBarchartMap.bottom/2)
+			.attr("y",barchart_wrapper_height - 20)
 			.attr("dy","1.3em")	
 			.text("Num. "+ dataType);
 

@@ -24,6 +24,9 @@ var arraySubIndicators = [0];
 
 var t = d3.transition();
 var customNumberFormat = d3.format(".2s");
+//  d3.format(".2s");
+
+	
 
 
 
@@ -363,7 +366,7 @@ function ready(error, rawHierarchy, rawGeoJson, rawData, rawConfiguration){
 												console.log("Exist in RAW data but not in the GeoJson:",entity);
 											}
 										});
-
+	
 	printLog(timerStart, "getting categories");
 
 	// =======================================================================
@@ -470,7 +473,7 @@ function setLoader(display){
 
 
 function assignGlobalVariablesFromOpts(config){
-	
+	// console.log('config',config)
 	updateConfigTree(config.optsTree);
 
 	updateConfigMultistream(config.optsMultistream);
@@ -491,6 +494,8 @@ function updateConfigMap(optsMap){
 }
 
 function updateConfigMultistream(optsMultistream){
+
+	console.log(optsMultistream.optsContext.timeIntervalBrushNormalLeft[0])
 
 	barZoomLeft = new Date(optsMultistream.optsContext.timeIntervalBrushZoom[0]);
 	barZoomRight = new Date(optsMultistream.optsContext.timeIntervalBrushZoom[1]);
@@ -624,11 +629,14 @@ function load_d3(configurationPathFile) {
 	setTimeout(function(){ 
 		
 		// FILES PATHS
-		let myGeoJSONPath = "source/refugees/geojson.json";
-		let myHierarchyJSONPath = "source/refugees/hierarchy.json";
-		let myRawDataPath = "source/refugees/data.json";
+		// let source_path = "source/travels/"
+		let source_path = "source/refugees/"
+
+		let myGeoJSONPath = source_path+"geojson.json";
+		let myHierarchyJSONPath = source_path+"hierarchy.json";
+		let myRawDataPath = source_path+"data.json";
 		if(configurationPathFile==null){
-			myConfiguration = "source/refugees/config.json";
+			myConfiguration = source_path+"config.json";
 		}else{
 			myConfiguration = configurationPathFile;
 		}

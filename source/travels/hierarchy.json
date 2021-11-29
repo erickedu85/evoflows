@@ -1,0 +1,780 @@
+{
+	"ranges": {
+		"name": "continents",
+		"children": [{
+				"name": "africa",
+				"children": [{
+						"name": "northern africa",
+						"children": [{
+								"name": "algeria"
+							},
+							{
+								"name": "egypt"
+							},
+							{
+								"name": "libya"
+							},
+							{
+								"name": "morocco"
+							},
+							{
+								"name": "sudan"
+							},
+							{
+								"name": "tunisia"
+							},
+							{
+								"name": "western sahara"
+							}
+						]
+					}, {
+						"name": "eastern africa",
+						"children": [{
+								"name": "burundi"
+							},
+							{
+								"name": "comoros"
+							},
+							{
+								"name": "djibouti"
+							},
+							{
+								"name": "eritrea"
+							},
+							{
+								"name": "ethiopia"
+							},
+							{
+								"name": "kenya"
+							},
+							{
+								"name": "madagascar"
+							},
+							{
+								"name": "malawi"
+							},
+							{
+								"name": "mauritius"
+							},
+							{
+								"name": "mozambique"
+							},
+
+							{
+								"name": "rwanda"
+							},
+
+							{
+								"name": "somalia"
+							},
+							{
+								"name": "south sudan"
+							},
+							{
+								"name": "uganda"
+							},
+							{
+								"name": "tanzania"
+							},
+							{
+								"name": "zambia"
+							},
+							{
+								"name": "zimbabwe"
+							}
+						]
+					},
+					{
+						"name": "middle africa",
+						"children": [{
+								"name": "angola"
+							},
+							{
+								"name": "cameroon"
+							},
+							{
+								"name": "central african rep."
+							},
+							{
+								"name": "chad"
+							},
+							{
+								"name": "congo"
+							},
+							{
+								"name": "dr congo"
+							},
+							{
+								"name": "equatorial guinea"
+							},
+							{
+								"name": "gabon"
+							},
+							{
+								"name": "sao tome and principe"
+							}
+						]
+					},
+
+					{
+						"name": "southern africa",
+						"children": [{
+								"name": "botswana"
+							},
+							{
+								"name": "lesotho"
+							},
+							{
+								"name": "namibia"
+							},
+							{
+								"name": "south africa"
+							},
+							{
+								"name": "swaziland"
+							}
+						]
+					},
+					{
+						"name": "western africa",
+						"children": [{
+								"name": "benin"
+							},
+							{
+								"name": "burkina faso"
+							},
+							{
+								"name": "cabo verde"
+							},
+							{
+								"name": "ivory coast"
+							},
+							{
+								"name": "gambia"
+							},
+							{
+								"name": "ghana"
+							},
+							{
+								"name": "guinea"
+							},
+							{
+								"name": "guinea-bissau"
+							},
+							{
+								"name": "liberia"
+							},
+							{
+								"name": "mali"
+							},
+							{
+								"name": "mauritania"
+							},
+							{
+								"name": "niger"
+							},
+							{
+								"name": "nigeria"
+							},
+
+							{
+								"name": "senegal"
+							},
+							{
+								"name": "sierra leone"
+							},
+							{
+								"name": "togo"
+							}
+						]
+					}
+
+				]
+			},
+			{
+				"name": "asia",
+				"children": [{
+						"name": "central asia",
+						"children": [{
+								"name": "kazakhstan"
+							},
+							{
+								"name": "kyrgyzstan"
+							},
+							{
+								"name": "tajikistan"
+							},
+							{
+								"name": "turkmenistan"
+							},
+							{
+								"name": "uzbekistan"
+							}
+						]
+					},
+					{
+						"name": "eastern asia",
+						"children": [{
+								"name": "china"
+							},
+							{
+								"name": "china hong kong sar"
+							},
+							
+							{
+								"name": "north korea"
+							},
+							{
+								"name": "japan"
+							},
+							{
+								"name": "mongolia"
+							},
+							{
+								"name": "south korea"
+							}
+						]
+					},
+					{
+						"name": "southern asia",
+						"children": [{
+								"name": "afghanistan"
+							},
+							{
+								"name": "bangladesh"
+							},
+							{
+								"name": "bhutan"
+							},
+							{
+								"name": "india"
+							},
+							{
+								"name": "iran"
+							},
+
+							{
+								"name": "nepal"
+							},
+							{
+								"name": "pakistan"
+							},
+							{
+								"name": "sri lanka"
+							}
+						]
+					},
+					{
+						"name": "south-eastern asia",
+						"children": [{
+								"name": "brunei darussalam"
+							},
+							{
+								"name": "cambodia"
+							},
+							{
+								"name": "indonesia"
+							},
+							{
+								"name": "laos"
+							},
+							{
+								"name": "malaysia"
+							},
+							{
+								"name": "myanmar"
+							},
+							{
+								"name": "philippines"
+							},
+							{
+								"name": "singapore"
+							},
+							{
+								"name": "thailand"
+							},
+							{
+								"name": "timor-leste"
+							},
+							{
+								"name": "viet nam"
+							}
+						]
+					},
+					{
+						"name": "western asia",
+						"children": [{
+								"name": "armenia"
+							},
+							{
+								"name": "azerbaijan"
+							},
+
+							{
+								"name": "cyprus"
+							},
+							{
+								"name": "georgia"
+							},
+							{
+								"name": "iraq"
+							},
+							{
+								"name": "israel"
+							},
+							{
+								"name": "jordan"
+							},
+							{
+								"name": "kuwait"
+							},
+							{
+								"name": "lebanon"
+							},
+							{
+								"name": "oman"
+							},
+							{
+								"name": "qatar"
+							},
+							{
+								"name": "saudi arabia"
+							},
+
+							{
+								"name": "syria"
+							},
+							{
+								"name": "turkey"
+							},
+							{
+								"name": "united arab emirates"
+							},
+							{
+								"name": "yemen"
+							}
+						]
+					}
+				]
+			},
+			{
+				"name": "europe",
+				"children": [{
+						"name": "northern europe",
+						"children": [{
+								"name": "denmark"
+							},
+							{
+								"name": "estonia"
+							},
+
+							{
+								"name": "finland"
+							},
+							{
+								"name": "iceland"
+							},
+							{
+								"name": "ireland"
+							},
+
+							{
+								"name": "latvia"
+							},
+							{
+								"name": "lithuania"
+							},
+							{
+								"name": "norway"
+							},
+							{
+								"name": "sweden"
+							},
+							{
+								"name": "united kingdom"
+							}
+						]
+					}, {
+						"name": "eastern europe",
+						"children": [{
+								"name": "belarus"
+							},
+							{
+								"name": "bulgaria"
+							},
+							{
+								"name": "czech rep."
+							},
+							{
+								"name": "hungary"
+							},
+							{
+								"name": "poland"
+							},
+							{
+								"name": "moldova"
+							},
+							{
+								"name": "romania"
+							},
+							{
+								"name": "russia"
+							},
+							{
+								"name": "slovakia"
+							},
+							{
+								"name": "ukraine"
+							}
+						]
+					},
+
+					{
+						"name": "southern europe",
+						"children": [{
+								"name": "albania"
+							},
+							{
+								"name": "andorra"
+							},
+							{
+								"name": "bosnia"
+							},
+							{
+								"name": "croatia"
+							},
+
+							{
+								"name": "greece"
+							},
+
+							{
+								"name": "italy"
+							},
+							{
+								"name": "montenegro"
+							},
+							{
+								"name": "portugal"
+							},
+
+							{
+								"name": "serbia"
+							},
+							{
+								"name": "slovenia"
+							},
+							{
+								"name": "spain"
+							},
+							{
+								"name": "macedonia"
+							}
+						]
+					},
+					{
+						"name": "western europe",
+						"children": [{
+								"name": "austria"
+							},
+							{
+								"name": "belgium"
+							},
+							{
+								"name": "france"
+							},
+							{
+								"name": "germany"
+							},
+
+							{
+								"name": "luxembourg"
+							},
+
+							{
+								"name": "netherlands"
+							},
+							{
+								"name": "switzerland"
+							}
+						]
+					}
+				]
+			},
+			{
+				"name": "america",
+				"children": [{
+						"name": "north america",
+						"children": [{
+								"name": "canada"
+							},
+							{
+								"name": "united states of america",
+								"children":[{
+										"name":"alabama"
+								},{
+										"name":"alaska"
+								},{
+										"name":"arizona"
+								},{
+										"name":"arkansas"
+								},{
+										"name":"california"
+								},{
+										"name":"colorado"
+								},{
+										"name":"connecticut"
+								},{
+										"name":"delaware"
+								},{
+										"name":"florida"
+								},{
+										"name":"georgia"
+								},{
+										"name":"hawaii"
+								},{
+										"name":"idaho"
+								},{
+										"name":"illinois"
+								},{
+										"name":"indiana"
+								},{
+										"name":"iowa"
+								},{
+										"name":"kansas"
+								},{
+										"name":"kentucky"
+								},{
+										"name":"louisiana"
+								},{
+										"name":"maine"
+								},{
+										"name":"maryland"
+								},{
+										"name":"massachusetts"
+								},{
+										"name":"michigan"
+								},{
+										"name":"minnesota"
+								},{
+										"name":"mississippi"
+								},{
+										"name":"missouri"
+								},{
+										"name":"montana"
+								},{
+										"name":"nebraska"
+								},{
+										"name":"nevada"
+								},{
+										"name":"new hampshire"
+								},{
+										"name":"new jersey"
+								},{
+										"name":"new mexico"
+								},{
+										"name":"new york"
+								},{
+										"name":"north carolina"
+								},{
+										"name":"north dakota"
+								},{
+										"name":"ohio"
+								},{
+										"name":"oklahoma"
+								},{
+										"name":"oregon"
+								},{
+										"name":"pennsylvania"
+								},{
+										"name":"rhode island"
+								},{
+										"name":"south carolina"
+								},{
+										"name":"south dakota"
+								},{
+										"name":"tennessee"
+								},{
+										"name":"texas"
+								},{
+										"name":"utah"
+								},{
+										"name":"vermont"
+								},{
+										"name":"virginia"
+								},{
+										"name":"washington"
+								},{
+										"name":"west virginia"
+								},{
+										"name":"wisconsin"
+								},{
+										"name":"wyoming"
+								},{
+										"name":"district of columbia"
+								}]
+							}
+						]
+					}, {
+						"name": "central america",
+						"children": [{
+								"name": "belize"
+							},
+							{
+								"name": "costa rica"
+							},
+							{
+								"name": "el salvador"
+							},
+							{
+								"name": "guatemala"
+							},
+							{
+								"name": "honduras"
+							},
+							{
+								"name": "mexico"
+							},
+							{
+								"name": "nicaragua"
+							},
+							{
+								"name": "panama"
+							},
+
+							{
+								"name": "bahamas"
+							},
+
+							{
+								"name": "cuba"
+							},
+
+							{
+								"name": "dominican rep."
+							},
+
+							{
+								"name": "haiti"
+							},
+							{
+								"name": "jamaica"
+							},
+
+
+							{
+								"name": "puerto rico"
+							},
+
+							{
+								"name": "saint lucia"
+							},
+
+
+							{
+								"name": "trinidad and tobago"
+							}
+
+						]
+					},
+					{
+						"name": "south america",
+						"children": [{
+								"name": "argentina"
+							},
+							{
+								"name": "bolivia"
+							},
+							{
+								"name": "brazil"
+							},
+							{
+								"name": "chile"
+							},
+							{
+								"name": "colombia"
+							},
+							{
+								"name": "ecuador"
+							},
+							
+							{
+								"name": "guyana"
+							},
+							{
+								"name": "paraguay"
+							},
+							{
+								"name": "peru"
+							},
+							{
+								"name": "suriname"
+							},
+							{
+								"name": "uruguay"
+							},
+							{
+								"name": "venezuela"
+							}
+						]
+					}
+				]
+			},
+
+			{
+				"name": "oceania",
+				"children": [{
+						"name": "australia/new zealand",
+						"children": [{
+								"name": "australia"
+							},
+							{
+								"name": "new zealand"
+							}
+						]
+					},
+					{
+						"name": "melanesia",
+						"children": [{
+								"name": "fiji"
+							},
+							{
+								"name": "new caledonia"
+							},
+							{
+								"name": "papua new guinea"
+							},
+							{
+								"name": "solomon islands"
+							},
+							{
+								"name": "vanuatu"
+							}
+						]
+					},
+					{
+						"name": "micronesia",
+						"children": [{
+								"name": "guam"
+							},
+							{
+								"name": "kiribati"
+							}
+
+						]
+					},
+					{
+						"name": "polynesia",
+						"children": [
+
+
+							{
+								"name": "samoa"
+							}
+						]
+					}
+				]
+			}
+		]
+	}
+}

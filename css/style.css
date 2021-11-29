@@ -45,10 +45,10 @@ p {
 }
 
 
-.title1{font-size:1.20rem;}
+.title1{font-size:1.30rem;}
 
 .subtitle1{
-	font-size: 1.10rem;
+	font-size: 1.15rem;
 	font-weight: 400;
 	font-style:normal;
 	letter-spacing: 0.05em;
@@ -202,16 +202,17 @@ div {
 }
 
 .navbar-brand .title {
-	vertical-align: middle;
-	font-size: 0.9em;
+	/* vertical-align: middle; */
+	font-size: 1.3em;
 	font-weight: 700;
 	letter-spacing: 0.15em;
 	color:rgba(255, 255, 255, 0.9);
 	margin: 0em 0em 0em 0.3em;
+	display:inline-block;
 }
 
 .navbar-brand .subTitle {
-	vertical-align: middle;
+	/* vertical-align: middle; */
 	font-size: 0.7em;
 	font-weight: 500;
 	color:rgba(242, 242, 242, 0.7);
@@ -235,7 +236,7 @@ div {
 
 #mainWrapper{
 	/* padding: 70px 22px 0px 22px; */
-	padding: 3.4em 0.0em 0em 0.0em;
+	padding: 2em 0.0em 0em 0.0em;
 }
 
 /* ========================== */
@@ -496,12 +497,12 @@ div {
 
 /*  */
 #msg-title-wrapper{
-	background:rgba(255, 255, 255, 0.6);
+	background:rgba(255, 255, 255, 0.8);
 	vertical-align: middle;
 	display:inline-block;
 	position:absolute;
-	margin-top:4.5em;
-	right: 2%;
+	margin-top:0.5em;
+	right: 1%;
 }
 
 #msg-title-wrapper .date-title-wrapper{

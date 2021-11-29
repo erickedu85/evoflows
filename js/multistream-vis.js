@@ -74,7 +74,7 @@ function orderTest(data) {
 var multiresolutionTop;
 var yScaleMultiresolution = d3.scale.linear();
 var yAxisMultiresolution = d3.svg.axis().scale(yScaleMultiresolution)
-								.tickSize(5, 0)
+								.tickSize(6, 0)
 								.tickPadding(5)
 								.ticks(5)
 								.tickFormat(customNumberFormat)
@@ -89,7 +89,7 @@ var heightMultiresolutionTop;
 var multiresolutionBottom;
 var yScaleMultiresolutionBottom = d3.scale.linear();
 var yAxisMultiresolutionBottom = d3.svg.axis().scale(yScaleMultiresolutionBottom)
-								.tickSize(5, 0)
+								.tickSize(6, 0)
 								.tickPadding(5)
 								.ticks(5)
 								.tickFormat(customNumberFormat)
@@ -133,8 +133,8 @@ var xScaleContextNorRight = d3.time.scale();
 
 //AXIS
 var xAxisContext = d3.svg.axis().scale(xScaleContext)
-							 .tickSize(-5, 5) //inner and outer : extrems of axis
-							 .tickPadding(8)
+							 .tickSize(12, 0) //inner and outer : extrems of axis
+							 .tickPadding(12)
 							 .ticks(5)
 							 .tickFormat(customTimeFormat)
 							 .orient("bottom");
@@ -901,6 +901,8 @@ function createSvg(){
 	
 	let multiresolutionHeighProportion;
 	let contextHeightProportion;
+
+	console.log("windowsHeight",windowsHeight)
 	
 	if (windowsHeight >= 1440){
 		multiresolutionHeighProportion = 0.42
@@ -909,8 +911,8 @@ function createSvg(){
 		multiresolutionHeighProportion = 0.42
 		contextHeightProportion = 0.13
 	} else{
-		multiresolutionHeighProportion = 0.4;
-		contextHeightProportion = 0.15;
+		multiresolutionHeighProportion = 0.41;
+		contextHeightProportion = 0.14;
 	}
 
 
@@ -933,7 +935,7 @@ function createSvg(){
 	heightMultiresolutionBottom = (alturaMultiresolutionBottom) - 20 - 20;
 
 	/* Creation margin Context */
-	marginContext = {top : alturaMultiresolutionTop + alturaMultiresolutionBottom + 25, right :  20, bottom : 20, left : 120};
+	marginContext = {top : alturaMultiresolutionTop + alturaMultiresolutionBottom + 25, right :  20, bottom : 10, left : 120};
 	heightContext = alturaContext - 20 - 20;
 	heightGapFocusContext = 45;
 	widthIntern = multistreamVisWidth - marginMultiresolutionTop.left - marginMultiresolutionTop.right;
@@ -1086,10 +1088,10 @@ function createSvg(){
 				.attr("width", widthIntern)
 				.attr("height",heightContext);
 
-	context.append("text")
-			.attr("class","x axis label")
-			.attr("transform","translate(" + (widthIntern/2) + " ," + (heightContext+20) + ")")
-			.text("");
+	// context.append("text")
+	// 		.attr("class","x axis label")
+	// 		.attr("transform","translate(" + (widthIntern/2) + " ," + (heightContext+20) + ")")
+	// 		.text("");
 
 
 	//CREATE PLAY BUTTON ANIMATION
@@ -1195,7 +1197,7 @@ function createSvg(){
 	}
 
 
-	createEventLegend();												
+	// createEventLegend();												
 
 }
 
@@ -3934,7 +3936,7 @@ function updateRectanglesAndLinksInFocus(){
 				.attr({
 					'xlink:href': function(){return (optsContext.blockedBrushNormalLeft)?pathCandadoClose:pathCandadoOpen;},  // can also add svg file here
 					x: xScaleContext(brushContextNorLeft.extent()[0])-8,
-					y: heightContext,
+					y: -heightContext+16,
 					width: 16,
 					height: 16
 				})
@@ -3954,7 +3956,7 @@ function updateRectanglesAndLinksInFocus(){
 				.attr({
 					'xlink:href': function(){return (optsContext.blockedBrushNormalRight)?pathCandadoClose:pathCandadoOpen;},  // can also add svg file here
 					x: xScaleContext(brushContextNorRight.extent()[1])-8,
-					y: heightContext,
+					y: -heightContext+16,
 					width: 16,
 					height: 16
 				})

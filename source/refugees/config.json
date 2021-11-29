@@ -17,19 +17,19 @@
 				"layersBorderlineColor": "#585858",
 				"layersOpacitySelected": 1,
 				"layersOpacityNotSelected": 0.10,
-				"layersOutputRangeLabelScale": [0.8,1],
+				"layersOutputRangeLabelScale": [0.6,0.75],
 				"layersLabelType": "flowLabelText"
 			},
 			"optsContext": {
-				"numTimeStepBrushZoom": 10,
-				"numTimeStepBrushDistortion": 1,
-				"numTimeStepBrushNormal": 2
+				"numTimeStepBrushZoom": 3,
+				"numTimeStepBrushDistortion": 2,
+				"numTimeStepBrushNormal": 3
 			}
 		},
 		"optsMap": {
 			"typeMapVisualization":"points",
 			"outputRangeColorScaleMap": ["#f0f9e8", "#1b73b2"],
-			"featuresOutputRangeLabelScale":[1,1]
+			"featuresOutputRangeLabelScale":[0.7,0.7]
 		},
 		"optsEvents": {
 			"eventWidthSizeLabelScale": 0.8,
@@ -53,7 +53,7 @@
 			},
 			"optsContext": {
 				"showBrushDistortion": false,
-				"showBrushNormal": true,
+				"showBrushNormal": false,
 				"showContext": true,
 				"blockedBrushNormalLeft": false,
 				"blockedBrushNormalRight": false,
